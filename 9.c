@@ -40,6 +40,7 @@ void draw_pixel(int m,int n)
 	glBegin(GL_POINTS);
 		glVertex2i(m,n);
 	glEnd();
+        glFlush();
 }
 
 void scanfill()
@@ -60,7 +61,6 @@ void scanfill()
 		for(x=le[y];x<=re[y];x++)
 		{
 			draw_pixel(x,y);
-			//sleep(1);
 		}
 	}
 }
@@ -68,7 +68,7 @@ void scanfill()
 void display()
 {
 	 glClearColor(1,1,1,1);
-     glClear(GL_COLOR_BUFFER_BIT);
+         glClear(GL_COLOR_BUFFER_BIT);
 	 glColor3f(0,0,1);
 	 glBegin(GL_LINE_LOOP);
 		glVertex2f(x1,y1);
