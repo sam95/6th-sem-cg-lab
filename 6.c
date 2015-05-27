@@ -34,16 +34,15 @@ void circle(int h,int k,int r)
 		{ 
 			x=x+1;
 			y=y;
-			symmetry(h,k,x,y);
 			d=d+2*x+3;
 		}
 		else
 		{
 			x=x+1;
 			y=y-1;
-			symmetry(h,k,x,y);
 			d=d+2*(x-y)+5;
 		}
+		symmetry(h,k,x,y);
 	}
 }
 
@@ -53,7 +52,7 @@ void cylinder()
 	int k=100;
 	int r=50;
 	int i;
-	for(i=1;i<=50;i++)
+	for(i=1;i<=50;i=i+3)
 	{
 		circle(h+i,k+i,r);
 	}
@@ -81,27 +80,28 @@ void parellopiped()
 	int i;
 	for(i=1;i<=50;i=i+3)
 	{
-		rectangle(x1+i,y1,x2+i,y2);
+		rectangle(x1+i,y1+i,x2+i,y2+i);
 	}
 }
 
 void myinit()
 {
     glMatrixMode(GL_PROJECTION);
-    gluOrtho2D(0,1000,0,1000);
+    gluOrtho2D(0,500,0,500);
 }
 
 void cyl_parl()
 {
 	glClearColor(1,1,1,1);
-        glClear(GL_COLOR_BUFFER_BIT); 
+    	glClear(GL_COLOR_BUFFER_BIT); 
 	cylinder();
 	parellopiped();
 }
 
-void main()
+void main(int argc,char **argv)
 {
-	glutInitWindowSize(300, 300); 
+	glutInit(&argc,argv);
+	glutInitWindowSize(500, 500); 
 	glutInitWindowPosition(100,100); 
 	glutCreateWindow("Cylinder and parellopiped"); 
 	glutDisplayFunc(cyl_parl); 
