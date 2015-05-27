@@ -93,10 +93,10 @@ void cohensutherland(float x1,float y1,float x2,float y2)
 		glVertex2f(xvmax,yvmax);
 		glVertex2f(xvmin,yvmax);
 	glEnd();			
-	float vx1=x1+100;
-	float vy1=y1+100;
-	float vx2=x2+100;
-	float vy2=y2+100;
+	float vx1=x1+200;
+	float vy1=y1+200;
+	float vx2=x2+200;
+	float vy2=y2+200;
 	glColor3f(0,1,1);
 	glBegin(GL_LINES);
 		glVertex2f(vx1,vy1);
