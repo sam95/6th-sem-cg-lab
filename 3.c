@@ -71,7 +71,7 @@ void display()
 }
 void main(int argc,char **argv)
 {
-		glutInit(&argc,argv)
+		glutInit(&argc,argv);
 		glutInitDisplayMode(GLUT_DEPTH);
 		glutInitWindowPosition(100,100);
 		glutInitWindowSize(500,500);
