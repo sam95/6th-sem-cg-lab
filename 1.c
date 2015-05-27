@@ -39,7 +39,7 @@ void divide_triangle(float *a,float *b,float *c,int n) //Each side of the triang
 }
 void tetrahedron()
 {
-		float tetra[4][3]={{0,.5,0},{.5,-.5,0},{-.5,-.5,0},{0,0,.5}}; //Co-ordinates of the tetrahedron
+		float tetra[4][3]={{0,1,0},{1,-1,0},{-1,-1,0},{0,0,1}}; //Co-ordinates of the tetrahedron
 
 		glClearColor(1,1,1,1); //Setting the background colour to white
 		glClear(GL_COLOR_BUFFER_BIT); //Clearing all the buffer bits
