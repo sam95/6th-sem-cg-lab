@@ -19,7 +19,7 @@ void edgedetect(int x1,int y1,int x2,int y2)
 	}
 	if(y2-y1!=0)
 	{
-		m=(x2-x1)/(y2-y1);
+		m=(y2-y1)/(x2-x1);
 	}
 	else
 	{
