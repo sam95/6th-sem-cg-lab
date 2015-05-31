@@ -44,12 +44,13 @@ void tetrahedron()
 		glClearColor(1,1,1,1); //Setting the background colour to white
 		glClear(GL_COLOR_BUFFER_BIT); //Clearing all the buffer bits
 		//Since a tetrahedron is a mixture of 4 triangles the divide triangle is called 4 times
+		glColor3f(1,0,0);
 		divide_triangle(tetra[0],tetra[1],tetra[2],n);
 		glColor3f(0,1,0);
 		divide_triangle(tetra[3],tetra[2],tetra[0],n);
 		glColor3f(0,0,1);
 		divide_triangle(tetra[3],tetra[0],tetra[1],n);
-		glColor3f(1,0,1);
+		glColor3f(0,0,0);
 		divide_triangle(tetra[3],tetra[1],tetra[2],n);
 
 }
