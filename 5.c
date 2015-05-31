@@ -1,6 +1,8 @@
 //COHEN SUTHERLAND LINE CLIPPING ALGORITHM//
 #include<stdio.h>
 #include<GL/glut.h>
+#define false 0
+#define true 1
 
 int top=0x4,bottom=0x1,left=0x2,right=0x8;
 float xmin=50,xmax=100,ymin=50,ymax=100;
@@ -25,7 +27,7 @@ int computecode(float x,float y)
 
 void cohensutherland(float x1,float y1,float x2,float y2)
 {
-	bool accept=false,done=false;
+	int accept=false,done=false;
 	int x,y;
 	int p1,p2,outsidepoint;
 	p1=computecode(x1,y1);
@@ -97,7 +99,7 @@ void cohensutherland(float x1,float y1,float x2,float y2)
 	float vy1=y1+200;
 	float vx2=x2+200;
 	float vy2=y2+200;
-	glColor3f(0,1,1);
+	glColor3f(0,0,0);
 	glBegin(GL_LINES);
 		glVertex2f(vx1,vy1);
 		glVertex2f(vx2,vy2);
@@ -120,7 +122,7 @@ void display()
 		glVertex2f(xmax,ymax);
 		glVertex2f(xmin,ymax);
 	glEnd();			
-	glColor3f(0,1,1);
+	glColor3f(0,0,0);
 	glBegin(GL_LINES);
 		glVertex2f(x1,y1);
 		glVertex2f(x2,y2);
