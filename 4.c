@@ -116,8 +116,9 @@ void myinit()
     gluOrtho2D(0,500,0,500);
 }
 
-void main()
+void main(int argc,char **argv)
 {
+	glutInit(&argc,argv);
 	printf("Enter the rotation angle\n");
 	scanf("%f",&theta);
 	theta=theta*3.141/180.0;
