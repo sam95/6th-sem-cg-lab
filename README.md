@@ -14,12 +14,14 @@ For Windows users, to set up OpenGL on Codeblocks, first Install codeblocks on y
 5. You're done!
 
 Advice : Use Unix operating systems to avoid complexity
+
+
 to Run the file on codeblocks just click on Build and run
 
 
 To run the file on the terminal(Unix) type
 
-gcc -lGL -glut filename.c
+gcc -lGL -lGLU -lglut filename.c
 
 
 ./a.out
