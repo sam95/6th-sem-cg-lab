@@ -1,9 +1,9 @@
 To install OpenGL on your computer, Follow the Below Instructions
 For Ubuntu/Fedora/Any Unix Operating systems, type these below commands on the terminal
 
-1. sudo apt-get install freeglut3 freeglut3-dev
-2. sudo apt-get install binutils-gold
-3. You're Done!
+    sudo apt-get install freeglut3 freeglut3-dev
+    sudo apt-get install binutils-gold
+You're Done!
 
 For Windows users, to set up OpenGL on Codeblocks, first Install codeblocks on your machine and follow the below steps
 
@@ -13,18 +13,16 @@ For Windows users, to set up OpenGL on Codeblocks, first Install codeblocks on y
 4. Add behaviour to linker settings in codeblocks!
 5. You're done!
 
-Advice : Use Unix operating systems to avoid complexity
+***Advice : Use Unix operating systems to avoid complexity***
 
 
-to Run the file on codeblocks just click on Build and run
+To Run the file on codeblocks just click on Build and run
 
 
 To run the file on the terminal(Unix) type
 
-gcc -lGL -lGLU -lglut filename.c
-
-
-./a.out
+    gcc -lGL -lGLU -lglut filename.c
+    ./a.out
 
 
 Design, develop, and implement the following programs in C / C++
